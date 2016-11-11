@@ -1,2 +1,2 @@
-# GVRDemo
-just demo (demo)
+# GVR Project
+google cardboard shooter
