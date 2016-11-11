@@ -3,16 +3,6 @@ using System.Collections;
 
 public class CubeScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
-
     public void ToggleVRMode()
     {
         GvrViewer.Instance.VRModeEnabled = !GvrViewer.Instance.VRModeEnabled;
