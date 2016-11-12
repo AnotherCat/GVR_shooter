@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using UnityEngine;
+using UnityEngine.UI;
 
 /// Draws a circular reticle in front of any object that the user gazes at.
 /// The circle dilates if the object is clickable.
@@ -54,6 +55,15 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
   private float reticleInnerDiameter = 0.0f;
   private float reticleOuterDiameter = 0.0f;
 
+    public LesserSpawner LS;
+
+    public float time = 0.6f;
+    private float timer = 0;
+
+    private bool chargeTrigger = false;
+
+    public Text txt;
+
   void Start () {
     CreateReticleVertices();
 
@@ -72,6 +82,11 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
 
   void Update() {
     UpdateDiameters();
+
+        if(txt != null)
+        {
+            txt.text = "" + timer;
+        }
   }
 
   /// This is called when the 'BaseInputModule' system should be enabled.
@@ -93,6 +108,8 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
   public void OnGazeStart(Camera camera, GameObject targetObject, Vector3 intersectionPosition,
                           bool isInteractive) {
     SetGazeTarget(intersectionPosition, isInteractive);
+        Debug.Log("charges !!!");
+        chargeTrigger = true;
   }
 
   /// Called every frame the user is still looking at a valid GameObject. This
@@ -104,6 +121,19 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
   public void OnGazeStay(Camera camera, GameObject targetObject, Vector3 intersectionPosition,
                          bool isInteractive) {
     SetGazeTarget(intersectionPosition, isInteractive);
+
+        if (chargeTrigger && targetObject.tag.Contains("Enemy"))
+        {
+            timer += Time.deltaTime;
+            if(timer >= time)
+            {
+                timer = 0;
+                LS.Shoot(intersectionPosition);
+
+                targetObject.GetComponent<TheEnemy>().TakeDamage(1);
+
+            }
+        }
   }
 
   /// Called when the user's look no longer intersects an object previously
@@ -117,6 +147,9 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
     reticleDistanceInMeters = kReticleDistanceMax;
     reticleInnerAngle = kReticleMinInnerAngle;
     reticleOuterAngle = kReticleMinOuterAngle;
+        Debug.Log("nope (not charges)");
+        timer = 0;
+        chargeTrigger = false;
   }
 
   /// Called when a trigger event is initiated. This is practically when

@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GvrReticleMaterial
-  m_Shader: {fileID: 4800000, guid: a3b352fc2ba734605a3df75466e600f0, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Name: Lesser_pp
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -71,9 +71,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _Border
-      second: 0.015
-    - first:
         name: _BumpScale
       second: 1
     - first:
@@ -83,17 +80,17 @@ Material:
         name: _DetailNormalMapScale
       second: 1
     - first:
-        name: _DistanceInMeters
-      second: 2
-    - first:
         name: _DstBlend
       second: 0
+    - first:
+        name: _GlossMapScale
+      second: 1
     - first:
         name: _Glossiness
       second: 0.5
     - first:
-        name: _InnerDiameter
-      second: 1.5
+        name: _GlossyReflections
+      second: 1
     - first:
         name: _Metallic
       second: 0
@@ -104,14 +101,14 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
-        name: _OuterDiameter
-      second: 2
-    - first:
         name: _Parallax
       second: 0.02
     - first:
-        name: _Radius
+        name: _SmoothnessTextureChannel
       second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
     - first:
         name: _SrcBlend
       second: 1
@@ -124,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.2827586, g: 1, b: 0, a: 1}
+      second: {r: 0.70339763, g: 0, b: 0.71323526, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
