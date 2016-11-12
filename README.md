@@ -3,6 +3,7 @@
 
 ###feature
 -gaze at box to shoot
+
 -try to kill all box
 
 ###bug
