@@ -62,8 +62,6 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
 
     private bool chargeTrigger = false;
 
-    public Text txt;
-
   void Start () {
     CreateReticleVertices();
 
@@ -82,11 +80,6 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
 
   void Update() {
     UpdateDiameters();
-
-        if(txt != null)
-        {
-            txt.text = "" + timer;
-        }
   }
 
   /// This is called when the 'BaseInputModule' system should be enabled.
@@ -108,7 +101,6 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
   public void OnGazeStart(Camera camera, GameObject targetObject, Vector3 intersectionPosition,
                           bool isInteractive) {
     SetGazeTarget(intersectionPosition, isInteractive);
-        Debug.Log("charges !!!");
         chargeTrigger = true;
   }
 
@@ -130,6 +122,7 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
                 timer = 0;
                 LS.Shoot(intersectionPosition);
 
+                Handheld.Vibrate();
                 targetObject.GetComponent<TheEnemy>().TakeDamage(1);
 
             }
@@ -147,7 +140,6 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
     reticleDistanceInMeters = kReticleDistanceMax;
     reticleInnerAngle = kReticleMinInnerAngle;
     reticleOuterAngle = kReticleMinOuterAngle;
-        Debug.Log("nope (not charges)");
         timer = 0;
         chargeTrigger = false;
   }

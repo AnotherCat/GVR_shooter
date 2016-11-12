@@ -1,12 +1,14 @@
 # GVR Project
-##0.8.0 playable
+###0.8.1 GameManager
+####feature
+-gaze to start button to start game
 
-###feature
+###0.8.0 playable
+
+####feature
 -gaze at box to shoot
 
 -try to kill all box
 
-###bug
-
-###next update
+####next update
 -add sound
