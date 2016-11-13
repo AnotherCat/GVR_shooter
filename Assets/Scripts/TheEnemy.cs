@@ -16,4 +16,26 @@ public class TheEnemy : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    void Update()
+    {
+
+        if (!NMA.pathPending)
+        {
+            if (NMA.remainingDistance <= NMA.stoppingDistance)
+            {
+                if (!NMA.hasPath || NMA.velocity.sqrMagnitude == 0f)
+                {
+                    GameManager.LIFE--;
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+        if (GameManager.GameOver)
+        {
+            Destroy(gameObject);
+        }
+    }
+    
 }

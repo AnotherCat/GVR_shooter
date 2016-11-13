@@ -124,7 +124,7 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
 
                 Handheld.Vibrate();
                 targetObject.GetComponent<TheEnemy>().TakeDamage(1);
-
+                GameManager.KILLS++;
             }
         }
   }

@@ -1,4 +1,8 @@
 # GVR Project
+###0.8.2 WaveManager
+####feature
+-wave of emeny spawn
+
 ###0.8.1 GameManager
 ####feature
 -gaze to start button to start game
