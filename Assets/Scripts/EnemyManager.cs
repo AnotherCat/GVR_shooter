@@ -7,27 +7,55 @@ public class EnemyManager : MonoBehaviour {
     public Transform TheEnemyPrefab;
     public Transform ThePlayer;
 
-    public float timeSpawn = 3f;
-    public float timer = 1.5f;
+    public float timeSpawn = 5f;
+    public float timer = 0;
 
     private int rangeRandom;
     public static int ENEMY_LIMIT = 10;
+
+    public int spawnCount = 1;
 
     void Start()
     {
         rangeRandom = SpawnPos.Length;
     }
 
+    void ResetEM()
+    {
+        timeSpawn = 5f;
+        timer = 0;
+        ENEMY_LIMIT = 10;
+        spawnCount = 1;
+    }
+
     void OnGameOver()
     {
         if (GameManager.GameOver)
         {
+            ResetEM();
+            gameObject.SetActive(false);
+        }
+    }
+
+    void OnWaveOver()
+    {
+        if (GameManager.WaveOver)
+        {
+            int wave = GameManager.WAVE;
+            ENEMY_LIMIT = 10 + wave / 2;
+            timeSpawn = 5 - wave * 0.012f;
+            spawnCount = wave / 3;
             gameObject.SetActive(false);
         }
     }
 
     void Update()
     {
+
+        OnGameOver();
+
+        OnWaveOver();
+
         if (ENEMY_LIMIT <= 0) return;
 
         timer += Time.deltaTime;
@@ -37,7 +65,7 @@ public class EnemyManager : MonoBehaviour {
 
             Vector3 previousPos = new Vector3(0,0,0);
             Vector3 pos = previousPos;
-            for(int i = 0;i< 3; i++)
+            for(int i = 0;i< Random.Range(1,spawnCount+1); i++)
             {
                 while(previousPos == pos)
                 {
@@ -53,7 +81,6 @@ public class EnemyManager : MonoBehaviour {
                 }
             }
         }
-
-        OnGameOver();
+        
     }
 }

@@ -35,4 +35,10 @@ public class ButtonGazeTime : MonoBehaviour {
     {
         isEnter = false;
     }
+
+    public void OnClicked()
+    {
+        isEnter = false;
+        timer = 0;
+    }
 }

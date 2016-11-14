@@ -1,4 +1,10 @@
 # GVR Project
+###0.8.3 Perface Game
+####feature
+-I dont know, cant explan it easy
+
+#### bug
+-cant reset scene
 ###0.8.2 WaveManager
 ####feature
 -wave of emeny spawn
