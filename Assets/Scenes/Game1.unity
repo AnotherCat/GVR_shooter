@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692528, g: 0.49678677, b: 0.57508475, a: 1}
+  m_IndirectSpecularColor: {r: 0.030902792, g: 0.028997978, b: 0.016299255, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6319,7 +6319,7 @@ MonoBehaviour:
   bypassRoomEffects: 0
   directivityAlpha: 0
   directivitySharpness: 1
-  gainDb: 15
+  gainDb: 10
   occlusionEnabled: 0
   playOnAwake: 0
   rolloffMode: 0
@@ -6348,7 +6348,7 @@ MonoBehaviour:
   bypassRoomEffects: 0
   directivityAlpha: 0
   directivitySharpness: 1
-  gainDb: 0
+  gainDb: 0.7
   occlusionEnabled: 0
   playOnAwake: 0
   rolloffMode: 0
@@ -6377,7 +6377,7 @@ MonoBehaviour:
   bypassRoomEffects: 0
   directivityAlpha: 0
   directivitySharpness: 1
-  gainDb: 0
+  gainDb: 0.7
   occlusionEnabled: 0
   playOnAwake: 0
   rolloffMode: 0
