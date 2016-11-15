@@ -4024,7 +4024,7 @@ MonoBehaviour:
   bypassRoomEffects: 0
   directivityAlpha: 0
   directivitySharpness: 1
-  gainDb: 16.3
+  gainDb: 15
   occlusionEnabled: 0
   playOnAwake: 0
   rolloffMode: 0
@@ -4111,7 +4111,7 @@ MonoBehaviour:
   bypassRoomEffects: 0
   directivityAlpha: 0
   directivitySharpness: 1
-  gainDb: 0
+  gainDb: 10
   occlusionEnabled: 0
   playOnAwake: 0
   rolloffMode: 0
@@ -4140,7 +4140,7 @@ MonoBehaviour:
   bypassRoomEffects: 0
   directivityAlpha: 0
   directivitySharpness: 1
-  gainDb: 0
+  gainDb: 10
   occlusionEnabled: 0
   playOnAwake: 0
   rolloffMode: 0
