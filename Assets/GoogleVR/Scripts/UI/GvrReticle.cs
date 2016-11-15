@@ -62,11 +62,24 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
 
     private bool chargeTrigger = false;
 
-  void Start () {
+    public GvrAudioSource LaserCharge;
+    public GvrAudioSource Laser1;
+    public GvrAudioSource Laser2;
+    public GvrAudioSource Bomb1;
+    public GvrAudioSource Bomb2;
+
+    void Start () {
     CreateReticleVertices();
 
     materialComp = gameObject.GetComponent<Renderer>().material;
-  }
+
+        GvrAudioSource[] gvrSfx = GetComponents<GvrAudioSource>();
+        LaserCharge = gvrSfx[0];
+        Laser1 = gvrSfx[1];
+        Laser2 = gvrSfx[2];
+        Bomb1 = gvrSfx[3];
+        Bomb2 = gvrSfx[4];
+    }
 
   void OnEnable() {
     GazeInputModule.gazePointer = this;
@@ -102,6 +115,10 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
                           bool isInteractive) {
     SetGazeTarget(intersectionPosition, isInteractive);
         chargeTrigger = true;
+        if (targetObject.tag.Contains("Enemy"))
+        {
+            LaserCharge.Play();
+        }
   }
 
   /// Called every frame the user is still looking at a valid GameObject. This
@@ -121,7 +138,22 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
             {
                 timer = 0;
                 LS.Shoot(intersectionPosition);
+                if (Random.Range(0,2) == 0)
+                {
+                    Laser1.Play();
+                }else
+                {
+                    Laser2.Play();
+                }
 
+                if (Random.Range(0, 2) == 0)
+                {
+                    Bomb1.Play();
+                }
+                else
+                {
+                    Bomb2.Play();
+                }
                 Handheld.Vibrate();
                 targetObject.GetComponent<TheEnemy>().TakeDamage(1);
                 GameManager.KILLS++;

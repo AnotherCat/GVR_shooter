@@ -37,7 +37,14 @@ public class GameManager : MonoBehaviour {
 
     public bool GameStarted = false;
     public GameObject Restart_Canvas;
+
     
+
+    void Start()
+    {
+        
+    }
+
     void UpdateText()
     {
         LifeText.text = "" + LIFE;
