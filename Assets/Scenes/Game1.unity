@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4469248, g: 0.49678648, b: 0.5750846, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692528, g: 0.49678677, b: 0.57508475, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4145,7 +4145,7 @@ MonoBehaviour:
   playOnAwake: 0
   rolloffMode: 0
   spread: 0
-  sourceClip: {fileID: 8300000, guid: 6469a599a6a56e24fb589293a597feac, type: 3}
+  sourceClip: {fileID: 8300000, guid: 6cd2a9136323a3e46912e69365834760, type: 3}
   sourceLoop: 0
   sourceMute: 0
   sourcePitch: 1
