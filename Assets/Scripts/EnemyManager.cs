@@ -7,13 +7,13 @@ public class EnemyManager : MonoBehaviour {
     public Transform TheEnemyPrefab;
     public Transform ThePlayer;
 
-    public float timeSpawn = 5f;
-    public float timer = 4f;
+    private float timeSpawn = 5f;
+    private float timer = 2f;
 
     private int rangeRandom;
     public static int ENEMY_LIMIT = 10;
 
-    public int spawnCount = 1;
+    private int spawnCount = 1;
 
     void Start()
     {
@@ -42,9 +42,13 @@ public class EnemyManager : MonoBehaviour {
         if (GameManager.WaveOver)
         {
             int wave = GameManager.WAVE;
-            ENEMY_LIMIT = 10 + wave / 2;
-            timeSpawn = 5 - wave * 0.012f;
-            spawnCount = wave / 3;
+            ENEMY_LIMIT = 10 + wave * 5;
+            timeSpawn = 5 - wave * 0.5f;
+            if(timeSpawn <= 2)
+            {
+                timeSpawn = 2;
+            }
+            spawnCount = wave * 2;
             gameObject.SetActive(false);
         }
     }

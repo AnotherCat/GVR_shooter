@@ -1,4 +1,11 @@
 # GVR Project
+
+
+###1.1.0
+####feature
+-Cant Restart game any more XD
+
+---
 ###1.0.0
 ####bug
 -can not restart game.
