@@ -137,9 +137,9 @@ public class GameManager : MonoBehaviour {
         {
             EM.SetActive(false);
             Life_Canvas.SetActive(false);
-            Wave_Canvas.SetActive(false);
+            //Wave_Canvas.SetActive(false);
             Enemy_Canvas.SetActive(false);
-            KILL_Canvas.SetActive(false);
+            //KILL_Canvas.SetActive(false);
             Restart_Canvas.SetActive(true);
         }
     }

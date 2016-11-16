@@ -8,7 +8,7 @@ public class EnemyManager : MonoBehaviour {
     public Transform ThePlayer;
 
     public float timeSpawn = 5f;
-    public float timer = 0;
+    public float timer = 4f;
 
     private int rangeRandom;
     public static int ENEMY_LIMIT = 10;
