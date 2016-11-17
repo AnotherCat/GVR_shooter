@@ -23,7 +23,7 @@ public class LesserSpawner : MonoBehaviour {
         if (foo)
         {
             timer += Time.deltaTime;
-            if (timer >= time)
+            if (timer >= time * 0.4f)
             {
                 timer = 0;
                 LR.enabled = false;
