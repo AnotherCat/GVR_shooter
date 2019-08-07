@@ -3,14 +3,18 @@
 
 This project compatible to unity3d version 5.4.2f2 [Download](https://unity3d.com/get-unity/download?thank-you=update&download_nid=43049&os=Win)
 
-how to open project
+### how to open project
 1. open unity3d
 2. open Asset > Scenes > Game1
 3. Click Play
 
+### Play Game
+1. download zip file game [Download](https://github.com/feedallcat/FinalProject/raw/master/BeMissile.zip)
+2. unzip game
+3. install it on your android phone
+4. launch app
 
-
-Update Note
+## Update Note
 
 ### 1.1.0
 #### feature
