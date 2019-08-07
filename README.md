@@ -9,7 +9,7 @@ This project compatible to unity3d version 5.4.2f2 [Download](https://unity3d.co
 3. Click Play
 
 ### Play Game
-1. download zip file game [Download](https://github.com/feedallcat/FinalProject/raw/master/BeMissile.zip)
+1. download zip file game [Download](https://github.com/feedallcat/GVR_shooter/raw/master/GVR_shooter.zip)
 2. unzip game
 3. install it on your android phone
 4. launch app
