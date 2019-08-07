@@ -1,6 +1,17 @@
 # GVR Project
 
 
+This project compatible to unity3d version 5.4.2f2 [Download](https://unity3d.com/get-unity/download?thank-you=update&download_nid=43049&os=Win)
+
+how to open project
+1. open unity3d
+2. open Asset > Scenes > Game1
+3. Click Play
+
+
+
+Update Note
+
 ###1.1.0
 ####feature
 -Cant Restart game any more XD
